@@ -36,7 +36,7 @@ if (error) {
 ```objective-c
 NSArray *array = [NSArray arrayWithObjects:@"foo", @"bar", @"baz"];
 NSError *error = nil;
-id JSON = AnyJSONEncode(array, &error);
+NSData *data = AnyJSONEncode(array, &error);
 if (error) {
   NSLog(@"Error: %@", error);
 }
