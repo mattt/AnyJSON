@@ -16,7 +16,7 @@ AnyJSON provides a function to encode and a function to decode JSON, using the f
 
 If none of these libraries are included in the target, AnyJSON falls back on ``NSJSONSerialization`, if available. To prefer `NSJSONSerialization` and fall back on the first available 3rd-party framework, `#define _ANYJSON_PREFER_NSJSONSERIALIZATION_`somewhere in your project.
 
-Why anyone can have such strong opinions about functionality that accounts for what--in so many cases--accounts for such an insignificant percentage of overall runtime is a mystery. But sometimes it's better not to press the issue, and just be as accommodating as you can. AnyJSON keeps the peace.
+Why anyone can have such strong opinions about functionality that--in so many cases--accounts for such an insignificant percentage of overall runtime is a mystery. But sometimes it's better not to press the issue, and just be as accommodating as you can. AnyJSON keeps the peace.
 
 ## Usage
 
