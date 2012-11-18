@@ -20,9 +20,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AnyJSON.h"
+#import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
-NSData * AnyJSONEncode(id object, NSError **error) {
+static void AnyJSONUnimplemented(id self, SEL _cmd) {
+    NSString *reason = [NSString stringWithFormat:@"%@[%@ %@] is not implemented", class_isMetaClass(object_getClass(self)) ? @"+" : @"-", self, NSStringFromSelector(_cmd)];
+    [[NSException exceptionWithName:@"AnyJSONUnimplementedException" reason:reason userInfo:nil] raise];
+}
+
+BOOL AnyJSONIsValidObject(id self, SEL _cmd, id object) {
+    AnyJSONUnimplemented(self, _cmd);
+    return NO;
+}
+
+NSData * AnyJSONEncodeData(id self, SEL _cmd, id object, NSJSONWritingOptions options, NSError **error) {
     if (!object) {
         return nil;
     }
@@ -38,15 +49,6 @@ NSData * AnyJSONEncode(id object, NSError **error) {
     
     id _NXJsonSerializerClass = NSClassFromString(@"NXJsonSerializer");
     SEL _NXJsonSerializerSelector = NSSelectorFromString(@"serialize:");
-
-    id _NSJSONSerializationClass = NSClassFromString(@"NSJSONSerialization");
-    SEL _NSJSONSerializationSelector = NSSelectorFromString(@"dataWithJSONObject:options:error:");
-    
-#ifdef _ANYJSON_PREFER_NSJSONSERIALIZATION_
-    if (_NSJSONSerializationClass && [_NSJSONSerializationClass respondsToSelector:_NSJSONSerializationSelector]) {
-        goto _nsjson_encode;
-    }
-#endif
     
     if (_JSONKitSelector && [object respondsToSelector:_JSONKitSelector]) {
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[object methodSignatureForSelector:_JSONKitSelector]];
@@ -98,32 +100,15 @@ NSData * AnyJSONEncode(id object, NSError **error) {
         [invocation invoke];
         [invocation getReturnValue:&JSONString];
         data = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
-    } else if (_NSJSONSerializationClass && [_NSJSONSerializationClass respondsToSelector:_NSJSONSerializationSelector]) {
-#ifdef _ANYJSON_PREFER_NSJSONSERIALIZATION_
-    _nsjson_encode:;
-#endif
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[_NSJSONSerializationClass methodSignatureForSelector:_NSJSONSerializationSelector]];
-        invocation.target = _NSJSONSerializationClass;
-        invocation.selector = _NSJSONSerializationSelector;
-
-        [invocation setArgument:&object atIndex:2];
-        NSUInteger writeOptions = 0;
-        [invocation setArgument:&writeOptions atIndex:3];
-        if (error != NULL) {
-            [invocation setArgument:error atIndex:4];
-        }
-
-        [invocation invoke];
-        [invocation getReturnValue:&data];
     } else {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Please either target a platform that supports NSJSONSerialization or add one of the following libraries to your project: JSONKit, SBJSON, or YAJL", nil) forKey:NSLocalizedRecoverySuggestionErrorKey];
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Please add one of the following libraries to your project: JSONKit, SBJSON, YAJL or Nextive JSON", nil) forKey:NSLocalizedRecoverySuggestionErrorKey];
         [[NSException exceptionWithName:NSInternalInconsistencyException reason:NSLocalizedString(@"No JSON generation functionality available", nil) userInfo:userInfo] raise];
     }
 
     return data;
 }
 
-id AnyJSONDecode(NSData *data, NSError **error) {
+id AnyJSONDecodeData(id self, SEL _cmd, NSData *data, NSJSONReadingOptions options, NSError **error) {
     if (!data || [data length] == 0) {
         return nil;
     }
@@ -136,20 +121,10 @@ id AnyJSONDecode(NSData *data, NSError **error) {
     
     id _SBJSONParserClass = NSClassFromString(@"SBJsonParser");
     SEL _SBJSONParserSelector = NSSelectorFromString(@"objectWithData:");
-
-    id _NSJSONSerializationClass = NSClassFromString(@"NSJSONSerialization");
-    SEL _NSJSONSerializationSelector = NSSelectorFromString(@"JSONObjectWithData:options:error:");
     
     id _NXJsonParserClass = NSClassFromString(@"NXJsonParser");
     SEL _NXJsonParserSelector = NSSelectorFromString(@"parseData:error:ignoreNulls:");
 
-    
-#ifdef _ANYJSON_PREFER_NSJSONSERIALIZATION_
-    if (_NSJSONSerializationClass && [_NSJSONSerializationClass respondsToSelector:_NSJSONSerializationSelector]) {
-        goto _nsjson_decode;
-    }
-#endif
-    
     if (_JSONKitSelector && [data respondsToSelector:_JSONKitSelector]) {
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[data methodSignatureForSelector:_JSONKitSelector]];
         invocation.target = data;
@@ -201,27 +176,63 @@ id AnyJSONDecode(NSData *data, NSError **error) {
         
         [invocation invoke];
         [invocation getReturnValue:&JSON];
-    } else if (_NSJSONSerializationClass && [_NSJSONSerializationClass respondsToSelector:_NSJSONSerializationSelector]) {
-#ifdef _ANYJSON_PREFER_NSJSONSERIALIZATION_
-    _nsjson_decode:;
-#endif
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[_NSJSONSerializationClass methodSignatureForSelector:_NSJSONSerializationSelector]];
-        invocation.target = _NSJSONSerializationClass;
-        invocation.selector = _NSJSONSerializationSelector;
-
-        [invocation setArgument:&data atIndex:2];
-        NSUInteger readOptions = 0;
-        [invocation setArgument:&readOptions atIndex:3];
-        if (error != NULL) {
-            [invocation setArgument:&error atIndex:4];
-        }
-
-        [invocation invoke];
-        [invocation getReturnValue:&JSON];
     } else {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Please either target a platform that supports NSJSONSerialization or add one of the following libraries to your project: JSONKit, SBJSON, or YAJL", nil) forKey:NSLocalizedRecoverySuggestionErrorKey];
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:NSLocalizedString(@"Please add one of the following libraries to your project: JSONKit, SBJSON, YAJL or Nextive JSON", nil) forKey:NSLocalizedRecoverySuggestionErrorKey];
         [[NSException exceptionWithName:NSInternalInconsistencyException reason:NSLocalizedString(@"No JSON parsing functionality available", nil) userInfo:userInfo] raise];
     }
         
     return JSON;
 }
+
+NSInteger AnyJSONEncodeStream(id self, SEL _cmd, id object, NSOutputStream *stream, NSJSONWritingOptions options, NSError **error) {
+    AnyJSONUnimplemented(self, _cmd);
+    return 0;
+}
+
+id AnyJSONDecodeStream(id self, SEL _cmd, NSInputStream *stream, NSJSONReadingOptions options, NSError **error) {
+    AnyJSONUnimplemented(self, _cmd);
+    return nil;
+}
+
+@protocol AnyJSONSerialization
+@required
++ (BOOL)isValidJSONObject:(id)obj;
++ (NSData *)dataWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(NSError **)error;
++ (id)JSONObjectWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError **)error;
++ (NSInteger)writeJSONObject:(id)obj toStream:(NSOutputStream *)stream options:(NSJSONWritingOptions)opt error:(NSError **)error;
++ (id)JSONObjectWithStream:(NSInputStream *)stream options:(NSJSONReadingOptions)opt error:(NSError **)error;
+@end
+
+__attribute__((constructor)) static void AnyJSONInitialize(void) {
+    Class NSJSONSerializationClass = objc_allocateClassPair(objc_getClass("NSObject"), "NSJSONSerialization", 0);
+    if (!NSJSONSerializationClass) {
+        return;
+    }
+    
+    Class NSJSONSerializationMetaClass = object_getClass(NSJSONSerializationClass);
+    class_addMethod(NSJSONSerializationMetaClass, @selector(isValidJSONObject:),                      (IMP)AnyJSONIsValidObject, protocol_getMethodDescription(@protocol(AnyJSONSerialization), @selector(isValidJSONObject:), YES, NO).types);
+    class_addMethod(NSJSONSerializationMetaClass, @selector(dataWithJSONObject:options:error:),       (IMP)AnyJSONEncodeData,    protocol_getMethodDescription(@protocol(AnyJSONSerialization), @selector(dataWithJSONObject:options:error:), YES, NO).types);
+    class_addMethod(NSJSONSerializationMetaClass, @selector(JSONObjectWithData:options:error:),       (IMP)AnyJSONDecodeData,    protocol_getMethodDescription(@protocol(AnyJSONSerialization), @selector(JSONObjectWithData:options:error:), YES, NO).types);
+    class_addMethod(NSJSONSerializationMetaClass, @selector(writeJSONObject:toStream:options:error:), (IMP)AnyJSONEncodeStream,  protocol_getMethodDescription(@protocol(AnyJSONSerialization), @selector(writeJSONObject:toStream:options:error:), YES, NO).types);
+    class_addMethod(NSJSONSerializationMetaClass, @selector(JSONObjectWithStream:options:error:),     (IMP)AnyJSONDecodeStream,  protocol_getMethodDescription(@protocol(AnyJSONSerialization), @selector(JSONObjectWithStream:options:error:), YES, NO).types);
+    objc_registerClassPair(NSJSONSerializationClass);
+    
+    Class *NSJSONSerializationClassRef = NULL;
+#if TARGET_CPU_ARM
+    asm("movw %0, :lower16:(L_OBJC_CLASS_NSJSONSerialization)" : "=r"(NSJSONSerializationClassRef));
+    asm("movt %0, :upper16:(L_OBJC_CLASS_NSJSONSerialization)" : "=r"(NSJSONSerializationClassRef));
+#else
+    asm("mov $L_OBJC_CLASS_NSJSONSerialization, %0" : "=r"(NSJSONSerializationClassRef));
+#endif
+    if (NSJSONSerializationClassRef) {
+        *NSJSONSerializationClassRef = NSJSONSerializationClass;
+    }
+}
+
+asm(
+".section        __DATA,__objc_classrefs,regular,no_dead_strip\n"
+".align          2\n"
+"L_OBJC_CLASS_NSJSONSerialization:\n"
+".long           _OBJC_CLASS_$_NSJSONSerialization\n"
+".weak_reference _OBJC_CLASS_$_NSJSONSerialization\n"
+);
