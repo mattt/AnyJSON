@@ -118,7 +118,8 @@ id AnyJSONDecodeData(id self, SEL _cmd, NSData *data, NSJSONReadingOptions optio
 
     id JSON = nil;
     
-    SEL _JSONKitSelector = NSSelectorFromString(@"objectFromJSONDataWithParseOptions:error:"); 
+    SEL _JSONKitSelector = NSSelectorFromString(@"objectFromJSONDataWithParseOptions:error:");
+    SEL _JSONKitMutableContainersSelector = NSSelectorFromString(@"mutableObjectFromJSONDataWithParseOptions:error:");
     
     SEL _YAJLSelector = NSSelectorFromString(@"yajl_JSONWithOptions:error:");
     
@@ -132,6 +133,9 @@ id AnyJSONDecodeData(id self, SEL _cmd, NSData *data, NSJSONReadingOptions optio
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[data methodSignatureForSelector:_JSONKitSelector]];
         invocation.target = data;
         invocation.selector = _JSONKitSelector;
+        if ((options & NSJSONReadingMutableContainers) == NSJSONReadingMutableContainers && [data respondsToSelector:_JSONKitMutableContainersSelector]) {
+            invocation.selector = _JSONKitMutableContainersSelector;
+        }
         
         NSUInteger parseOptionFlags = 0;
         [invocation setArgument:&parseOptionFlags atIndex:2];
