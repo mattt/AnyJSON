@@ -56,6 +56,9 @@ NSData * AnyJSONEncodeData(id self, SEL _cmd, id object, NSJSONWritingOptions op
         invocation.selector = _JSONKitSelector;
         
         NSUInteger serializeOptionFlags = 0;
+        if ((options & NSJSONWritingPrettyPrinted) == NSJSONWritingPrettyPrinted) {
+            serializeOptionFlags = 1 << 0; // JKSerializeOptionPretty
+        }
         [invocation setArgument:&serializeOptionFlags atIndex:2];
         if (error != NULL) {
             [invocation setArgument:error atIndex:3];
