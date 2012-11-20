@@ -46,6 +46,7 @@ NSData * AnyJSONEncodeData(id self, SEL _cmd, id object, NSJSONWritingOptions op
     
     id _SBJsonWriterClass = NSClassFromString(@"SBJsonWriter");
     SEL _SBJsonWriterSelector = NSSelectorFromString(@"dataWithObject:");
+    SEL _SBJsonWriterSetHumanReadableSelector = NSSelectorFromString(@"setHumanReadable:");
     
     id _NXJsonSerializerClass = NSClassFromString(@"NXJsonSerializer");
     SEL _NXJsonSerializerSelector = NSSelectorFromString(@"serialize:");
@@ -68,6 +69,13 @@ NSData * AnyJSONEncodeData(id self, SEL _cmd, id object, NSJSONWritingOptions op
         [invocation getReturnValue:&data];
     } else if (_SBJsonWriterClass && [_SBJsonWriterClass instancesRespondToSelector:_SBJsonWriterSelector]) {
         id writer = [[_SBJsonWriterClass alloc] init];
+        if ((options & NSJSONWritingPrettyPrinted) == NSJSONWritingPrettyPrinted && [writer respondsToSelector:_SBJsonWriterSetHumanReadableSelector]) {
+            NSInvocation *humanReadableInvocation = [NSInvocation invocationWithMethodSignature:[writer methodSignatureForSelector:_SBJsonWriterSetHumanReadableSelector]];
+            humanReadableInvocation.target = writer;
+            humanReadableInvocation.selector = _SBJsonWriterSetHumanReadableSelector;
+            [humanReadableInvocation setArgument:&(BOOL){YES} atIndex:2];
+            [humanReadableInvocation invoke];
+        }
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[writer methodSignatureForSelector:_SBJsonWriterSelector]];
         invocation.target = writer;
         invocation.selector = _SBJsonWriterSelector;
