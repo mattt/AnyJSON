@@ -42,7 +42,7 @@ NSData * AnyJSONEncodeData(id self, SEL _cmd, id object, NSJSONWritingOptions op
     
     SEL _JSONKitSelector = NSSelectorFromString(@"JSONDataWithOptions:error:"); 
     
-    SEL _YAJLSelector = NSSelectorFromString(@"yajl_JSONString");
+    SEL _YAJLSelector = NSSelectorFromString(@"yajl_JSONStringWithOptions:indentString:");
     
     id _SBJsonWriterClass = NSClassFromString(@"SBJsonWriter");
     SEL _SBJsonWriterSelector = NSSelectorFromString(@"dataWithObject:");
@@ -83,6 +83,14 @@ NSData * AnyJSONEncodeData(id self, SEL _cmd, id object, NSJSONWritingOptions op
             NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[object methodSignatureForSelector:_YAJLSelector]];
             invocation.target = object;
             invocation.selector = _YAJLSelector;
+            
+            NSUInteger genOptions = 0;
+            if ((options & NSJSONWritingPrettyPrinted) == NSJSONWritingPrettyPrinted) {
+                genOptions = 1 << 0; // YAJLGenOptionsBeautify
+            }
+            [invocation setArgument:&genOptions atIndex:2];
+            NSString *indent = @"  ";
+            [invocation setArgument:&indent atIndex:3];
             
             [invocation invoke];
             [invocation getReturnValue:&JSONString];
