@@ -171,6 +171,15 @@ id AnyJSONDecodeData(id self, SEL _cmd, NSData *data, NSJSONReadingOptions optio
 
         [invocation invoke];
         [invocation getReturnValue:&JSON];
+        
+        if (!JSON && error && [parser respondsToSelector:@selector(error)]) {
+            id parserError = [parser performSelector:@selector(error)];
+            if ([parserError isKindOfClass:[NSError class]]) {
+                *error = parserError;
+            } else if ([parserError isKindOfClass:[NSString class]]) {
+                *error = [NSError errorWithDomain:@"org.brautaset.SBJsonParser.ErrorDomain" code:0 userInfo:@{NSLocalizedDescriptionKey : parserError}];
+            }
+        }
         [parser release];
     } else if (_YAJLSelector && [data respondsToSelector:_YAJLSelector]) {
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[data methodSignatureForSelector:_YAJLSelector]];
