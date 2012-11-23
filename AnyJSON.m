@@ -84,6 +84,15 @@ NSData * AnyJSONEncodeData(id self, SEL _cmd, id object, NSJSONWritingOptions op
         
         [invocation invoke];
         [invocation getReturnValue:&data];
+        
+        if (!data && error && [writer respondsToSelector:@selector(error)]) {
+            id writerError = [writer performSelector:@selector(error)];
+            if ([writerError isKindOfClass:[NSError class]]) {
+                *error = writerError;
+            } else if ([writerError isKindOfClass:[NSString class]]) {
+                *error = [NSError errorWithDomain:@"org.brautaset.SBJsonWriter.ErrorDomain" code:0 userInfo:@{NSLocalizedDescriptionKey : writerError}];
+            }
+        }
         [writer release];
     } else if (_YAJLSelector && [object respondsToSelector:_YAJLSelector]) {
         @try {
