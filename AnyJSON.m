@@ -260,8 +260,9 @@ __attribute__((constructor)) static void AnyJSONInitialize(void) {
     
     Class *NSJSONSerializationClassRef = NULL;
 #if TARGET_CPU_ARM
-    asm("movw %0, :lower16:(L_OBJC_CLASS_NSJSONSerialization)" : "=r"(NSJSONSerializationClassRef));
-    asm("movt %0, :upper16:(L_OBJC_CLASS_NSJSONSerialization)" : "=r"(NSJSONSerializationClassRef));
+    asm("movw %0, :lower16:(L_OBJC_CLASS_NSJSONSerialization-(LPC0+4))" : "=r"(NSJSONSerializationClassRef));
+    asm("movt %0, :upper16:(L_OBJC_CLASS_NSJSONSerialization-(LPC0+4))" : "=r"(NSJSONSerializationClassRef));
+    asm("LPC0: add %0, pc" : "=r"(NSJSONSerializationClassRef));
 #else
     asm("mov $L_OBJC_CLASS_NSJSONSerialization, %0" : "=r"(NSJSONSerializationClassRef));
 #endif
