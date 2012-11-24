@@ -244,7 +244,7 @@ id AnyJSONDecodeStream(id self, SEL _cmd, NSInputStream *stream, NSJSONReadingOp
 + (id)JSONObjectWithStream:(NSInputStream *)stream options:(NSJSONReadingOptions)opt error:(NSError **)error;
 @end
 
-__attribute__((constructor)) static void AnyJSONInitialize(void) {
+__attribute__((constructor)) void AnyJSONInitialize(void) {
     Class NSJSONSerializationClass = objc_allocateClassPair(objc_getClass("NSObject"), "NSJSONSerialization", 0);
     if (!NSJSONSerializationClass) {
         return;
