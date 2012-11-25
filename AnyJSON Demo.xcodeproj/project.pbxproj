@@ -885,6 +885,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
 				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(BUILT_PRODUCTS_DIR)/libAnyJSON.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -901,6 +905,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
 				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(BUILT_PRODUCTS_DIR)/libAnyJSON.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
