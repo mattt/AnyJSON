@@ -274,7 +274,13 @@ __attribute__((constructor)) void AnyJSONInitialize(void) {
 }
 
 asm(
-#if TARGET_CPU_X86 && !TARGET_IPHONE_SIMULATOR
+#if __OBJC2__
+".section        __DATA,__objc_classrefs,regular,no_dead_strip\n"
+".align          2\n"
+"L_OBJC_CLASS_NSJSONSerialization:\n"
+".long           _OBJC_CLASS_$_NSJSONSerialization\n"
+".weak_reference _OBJC_CLASS_$_NSJSONSerialization\n"
+#else
 ".section        __TEXT,__cstring,cstring_literals\n"
 "L_OBJC_CLASS_NAME_NSJSONSerialization:\n"
 ".asciz          \"NSJSONSerialization\"\n"
@@ -282,12 +288,6 @@ asm(
 ".align          2\n"
 "L_OBJC_CLASS_NSJSONSerialization:\n"
 ".long           L_OBJC_CLASS_NAME_NSJSONSerialization\n"
-#else
-".section        __DATA,__objc_classrefs,regular,no_dead_strip\n"
-".align          2\n"
-"L_OBJC_CLASS_NSJSONSerialization:\n"
-".long           _OBJC_CLASS_$_NSJSONSerialization\n"
-".weak_reference _OBJC_CLASS_$_NSJSONSerialization\n"
 #endif
 );
 
