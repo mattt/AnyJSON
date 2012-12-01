@@ -267,8 +267,10 @@ __attribute__((constructor)) void AnyJSONInitialize(void) {
     );
 #elif TARGET_CPU_X86_64
     asm("movq l_OBJC_CLASS_NSJSONSerialization@GOTPCREL(%%rip), %0" : "=r"(NSJSONSerializationClassRef));
+#elif TARGET_CPU_X86
+    asm("movl $L_OBJC_CLASS_NSJSONSerialization, %0" : "=r"(NSJSONSerializationClassRef));
 #else
-    asm("mov $L_OBJC_CLASS_NSJSONSerialization, %0" : "=r"(NSJSONSerializationClassRef));
+#error Unsupported CPU
 #endif
     if (NSJSONSerializationClassRef) {
         *NSJSONSerializationClassRef = NSJSONSerializationClass;
