@@ -265,6 +265,8 @@ __attribute__((constructor)) void AnyJSONInitialize(void) {
     "movt %0, :upper16:(L_OBJC_CLASS_NSJSONSerialization-(LPC0+4))\n"
     "LPC0: add %0, pc" : "=r"(NSJSONSerializationClassRef)
     );
+#elif TARGET_CPU_X86_64
+    asm("movq l_OBJC_CLASS_NSJSONSerialization@GOTPCREL(%%rip), %0" : "=r"(NSJSONSerializationClassRef));
 #else
     asm("mov $L_OBJC_CLASS_NSJSONSerialization, %0" : "=r"(NSJSONSerializationClassRef));
 #endif
@@ -276,9 +278,15 @@ __attribute__((constructor)) void AnyJSONInitialize(void) {
 asm(
 #if __OBJC2__
 ".section        __DATA,__objc_classrefs,regular,no_dead_strip\n"
+#if TARGET_RT_64_BIT
+".align          3\n"
+"l_OBJC_CLASS_NSJSONSerialization:\n"
+".quad           _OBJC_CLASS_$_NSJSONSerialization\n"
+#else
 ".align          2\n"
 "L_OBJC_CLASS_NSJSONSerialization:\n"
 ".long           _OBJC_CLASS_$_NSJSONSerialization\n"
+#endif
 ".weak_reference _OBJC_CLASS_$_NSJSONSerialization\n"
 #else
 ".section        __TEXT,__cstring,cstring_literals\n"
