@@ -266,7 +266,7 @@ __attribute__((constructor)) void AnyJSONInitialize(void) {
     "LPC0: add %0, pc" : "=r"(NSJSONSerializationClassRef)
     );
 #elif TARGET_CPU_X86_64
-    asm("movq l_OBJC_CLASS_NSJSONSerialization@GOTPCREL(%%rip), %0" : "=r"(NSJSONSerializationClassRef));
+    asm("leaq L_OBJC_CLASS_NSJSONSerialization(%%rip), %0" : "=r"(NSJSONSerializationClassRef));
 #elif TARGET_CPU_X86
     asm("movl $L_OBJC_CLASS_NSJSONSerialization, %0" : "=r"(NSJSONSerializationClassRef));
 #else
@@ -282,7 +282,7 @@ asm(
     ".section        __DATA,__objc_classrefs,regular,no_dead_strip\n"
     #if TARGET_RT_64_BIT
         ".align          3\n"
-        "l_OBJC_CLASS_NSJSONSerialization:\n"
+        "L_OBJC_CLASS_NSJSONSerialization:\n"
         ".quad           _OBJC_CLASS_$_NSJSONSerialization\n"
     #else
         ".align          2\n"
