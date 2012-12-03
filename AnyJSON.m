@@ -279,26 +279,26 @@ __attribute__((constructor)) void AnyJSONInitialize(void) {
 
 asm(
 #if __OBJC2__
-".section        __DATA,__objc_classrefs,regular,no_dead_strip\n"
-#if TARGET_RT_64_BIT
-".align          3\n"
-"l_OBJC_CLASS_NSJSONSerialization:\n"
-".quad           _OBJC_CLASS_$_NSJSONSerialization\n"
+    ".section        __DATA,__objc_classrefs,regular,no_dead_strip\n"
+    #if TARGET_RT_64_BIT
+        ".align          3\n"
+        "l_OBJC_CLASS_NSJSONSerialization:\n"
+        ".quad           _OBJC_CLASS_$_NSJSONSerialization\n"
+    #else
+        ".align          2\n"
+        "L_OBJC_CLASS_NSJSONSerialization:\n"
+        ".long           _OBJC_CLASS_$_NSJSONSerialization\n"
+    #endif
 #else
-".align          2\n"
-"L_OBJC_CLASS_NSJSONSerialization:\n"
-".long           _OBJC_CLASS_$_NSJSONSerialization\n"
+    ".section        __TEXT,__cstring,cstring_literals\n"
+    "L_OBJC_CLASS_NAME_NSJSONSerialization:\n"
+    ".asciz          \"NSJSONSerialization\"\n"
+    ".section        __OBJC,__cls_refs,literal_pointers,no_dead_strip\n"
+    ".align          2\n"
+    "L_OBJC_CLASS_NSJSONSerialization:\n"
+    ".long           L_OBJC_CLASS_NAME_NSJSONSerialization\n"
 #endif
 ".weak_reference _OBJC_CLASS_$_NSJSONSerialization\n"
-#else
-".section        __TEXT,__cstring,cstring_literals\n"
-"L_OBJC_CLASS_NAME_NSJSONSerialization:\n"
-".asciz          \"NSJSONSerialization\"\n"
-".section        __OBJC,__cls_refs,literal_pointers,no_dead_strip\n"
-".align          2\n"
-"L_OBJC_CLASS_NSJSONSerialization:\n"
-".long           L_OBJC_CLASS_NAME_NSJSONSerialization\n"
-#endif
 );
 
 // This dummy category ensures that all the AnyJSON functions are not stripped by the linker if the -ObjC linker flag is used.
