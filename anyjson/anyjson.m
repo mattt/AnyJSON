@@ -13,7 +13,8 @@ void ExitWithError(NSString *message, id error)
     NSDictionary *environment = [[NSProcessInfo processInfo] environment];
     BOOL term = [environment objectForKey:@"TERM"] != nil;
     BOOL xcodeColors = [[environment objectForKey:@"XcodeColors"] boolValue];
-    NSLog(term || xcodeColors ? @"\e[1;31m%@:\e[m %@" : @"%@: %@", message, [error description]);
+    NSString *userInfo = [error isKindOfClass:[NSError class]] ? [@"\n" stringByAppendingString:[[error userInfo] description]] : @"";
+    NSLog(term || xcodeColors ? @"\e[1;31m%@:\e[m %@%@" : @"%@: %@%@", message, [error description], userInfo);
     exit(EXIT_FAILURE);
 }
 
