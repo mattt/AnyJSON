@@ -37,7 +37,7 @@ The following methods are supported by AnyJSON.
 
 ### Unsupported methods
 
-The following methods are currently not supported by AnyJSON. They throws an `AnyJSONUnimplementedException` exception.
+The following methods are currently not supported by AnyJSON. They throw an `AnyJSONUnimplementedException` exception.
 
 `+ (id)JSONObjectWithStream:(NSInputStream *)stream options:(NSJSONReadingOptions)opt error:(NSError **)error`
 `+ (NSInteger)writeJSONObject:(id)obj toStream:(NSOutputStream *)stream options:(NSJSONWritingOptions)opt error:(NSError **)error`
