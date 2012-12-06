@@ -20,14 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-
-/**
- Returns a UTF-8-encoded JSON string representation of the specified object.
+/*
+ * AnyJSON does not provide a public API. Use the built-in NSJSONSerialization
+ * API, that AnyJSON will automatically implement with a third-party framework
+ * on iOS < 5. See the project README for more information.
  */
-extern NSData * AnyJSONEncode(id object, NSError **error);
-
-/**
- Returns an object constructed from the specified UTF-8-encoded JSON string representation.
- */
-extern id AnyJSONDecode(NSData *data, NSError **error);

@@ -7,40 +7,41 @@ What was once the most egregious part of [AFNetworking](https://github.com/afnet
 
 This is a library about getting things to work, because there are more important things that you have to do than futz around with an interchange format. 
 
-AnyJSON provides a function to encode and a function to decode JSON, using the first available of the following 3rd-party libraries:
+AnyJSON implements the `NSJSONSerialization` API on platforms that do not support it (i.e. iOS < 5) using the first available of the following 3rd-party libraries:
 
 - [JSONKit](https://github.com/johnezang/JSONKit)
 - [yajl_json](http://gabriel.github.com/yajl-objc/)
 - [SBJSON](http://stig.github.com/json-framework/)
 - [NextiveJSON](https://github.com/nextive/NextiveJson)
 
-If none of these libraries are included in the target, AnyJSON falls back on ``NSJSONSerialization`, if available. To prefer `NSJSONSerialization` and fall back on the first available 3rd-party framework, `#define _ANYJSON_PREFER_NSJSONSERIALIZATION_`somewhere in your project.
-
 Why anyone can have such strong opinions about functionality that--in so many cases--accounts for such an insignificant percentage of overall runtime is a mystery. But sometimes it's better not to press the issue, and just be as accommodating as you can. AnyJSON keeps the peace.
 
-## Usage
+## Compatibility
 
-### Decoding
+### Supported methods
 
-```objective-c
-NSData *data = [@"{\"foo\": 42}" dataUsingEncoding:NSUTF8StringEncoding];
-NSError *error = nil;
-id JSON = AnyJSONDecode(data, &error);
-if (error) {
-  NSLog(@"Error: %@", error);
-}
-```
+The following methods are supported by AnyJSON.
 
-### Encoding
+`+ (id)JSONObjectWithData:(NSData *)data options:(NSJSONReadingOptions)opt error:(NSError **)error`
+`+ (NSData *)dataWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(NSError **)error`
 
-```objective-c
-NSArray *array = [NSArray arrayWithObjects:@"foo", @"bar", @"baz"];
-NSError *error = nil;
-NSData *data = AnyJSONEncode(array, &error);
-if (error) {
-  NSLog(@"Error: %@", error);
-}
-```
+### Supported reading options
+
+* `NSJSONReadingMutableContainers` is supported by JSONKit only.
+* `NSJSONReadingMutableLeaves` is not supported. Note that it does not even work with NSJSONSerialization on iOS 5+.
+* `NSJSONReadingAllowFragments` is not supported but NextiveJSON always allows fragments.
+
+### Supported writing options
+
+* `NSJSONWritingPrettyPrinted` is supported by JSONKit, yajl_json and SBJSON.
+
+### Unsupported methods
+
+The following methods are currently not supported by AnyJSON. They throw an `AnyJSONUnimplementedException` exception.
+
+`+ (id)JSONObjectWithStream:(NSInputStream *)stream options:(NSJSONReadingOptions)opt error:(NSError **)error`
+`+ (NSInteger)writeJSONObject:(id)obj toStream:(NSOutputStream *)stream options:(NSJSONWritingOptions)opt error:(NSError **)error`
+`+ (BOOL)isValidJSONObject:(id)obj`
 
 ## Contact
 
