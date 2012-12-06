@@ -195,6 +195,7 @@
 		C21E2A45166E9CC300F1E521 /* NextiveJson.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = NextiveJson.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21E2A58166EA2C300F1E521 /* JSONKit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = JSONKit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJL.xcodeproj; path = "AnyJSON Demo/Libraries/YAJL/Project/YAJL.xcodeproj"; sourceTree = "<group>"; };
+		C22FAD7D16714E7000AD3D85 /* AnyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyJSON.h; sourceTree = "<group>"; };
 		C297520C1660126900C734D3 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C29752211660129500C734D3 /* AnyJSON+YAJL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+YAJL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJLiOS.xcodeproj; path = "AnyJSON Demo/Libraries/YAJL/Project-iOS/YAJLiOS.xcodeproj"; sourceTree = "<group>"; };
@@ -309,6 +310,7 @@
 		C20BA5C616591397009CDED0 = {
 			isa = PBXGroup;
 			children = (
+				C22FAD7D16714E7000AD3D85 /* AnyJSON.h */,
 				C20BA602165915D3009CDED0 /* AnyJSON.m */,
 				C29752081660126000C734D3 /* Libraries */,
 				C20BA5DB16591397009CDED0 /* AnyJSON Demo */,
@@ -1248,6 +1250,7 @@
 				C21E2A48166E9CC300F1E521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C21E2A55166EA2C300F1E521 /* Build configuration list for PBXNativeTarget "JSONKit" */ = {
 			isa = XCConfigurationList;
@@ -1256,6 +1259,7 @@
 				C21E2A57166EA2C300F1E521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C297521E1660129500C734D3 /* Build configuration list for PBXNativeTarget "AnyJSON+YAJL" */ = {
 			isa = XCConfigurationList;
