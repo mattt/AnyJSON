@@ -22,7 +22,7 @@
 
 #import "AppDelegate.h"
 
-#import "DemoViewController.h"
+#import "RootViewController.h"
 
 @implementation AppDelegate
 @synthesize window = _window;
@@ -32,11 +32,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[DemoViewController alloc] init]];
+    UIViewController *viewController = [[RootViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
-    
     self.window.rootViewController = navigationController;
+    
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

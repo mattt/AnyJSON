@@ -1,4 +1,4 @@
-// DemoViewController.m
+// RootViewController.m
 //
 // Copyright (c) 2012 Cédric Luthi (https://twitter.com/0xced)
 //
@@ -20,9 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DemoViewController.h"
+#import "RootViewController.h"
 
-@implementation DemoViewController
+@implementation RootViewController
 
 #pragma mark - UIViewController
 
@@ -45,6 +45,8 @@
     self.libraryLabel.text = library;
 }
 
+#pragma mark - IBAction
+
 - (IBAction)test:(id)sender {
     [self.view endEditing:YES];
     
@@ -53,21 +55,21 @@
         NSJSONReadingOptions readingOptions = 0;
         id object = [NSJSONSerialization JSONObjectWithData:[self.inputTextView.text dataUsingEncoding:NSUTF8StringEncoding] options:readingOptions error:&readingError];
         if (!object) {
-            self.outputTextView.text = [NSString stringWithFormat:@"Reading Error: %@", readingError];
+            self.outputTextView.text = [NSString stringWithFormat:NSLocalizedString(@"Reading Error: %@", nil), readingError];
             return;
         }
         
-        NSJSONWritingOptions writingOptions = 0;
         NSError *writingError = nil;
+        NSJSONWritingOptions writingOptions = 0;
         NSData *data = [NSJSONSerialization dataWithJSONObject:object options:writingOptions error:&writingError];
         if (!data) {
-            self.outputTextView.text = [NSString stringWithFormat:@"Writing Error: %@", writingError];
+            self.outputTextView.text = [NSString stringWithFormat:NSLocalizedString(@"Writing Error: %@", nil), writingError];
             return;
         }
         
         self.outputTextView.text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     } @catch (NSException *exception) {
-        self.outputTextView.text = [NSString stringWithFormat:@"Exception: %@", exception];
+        self.outputTextView.text = [NSString stringWithFormat:NSLocalizedString(@"Exception: %@", nil), exception];
     }
 }
 

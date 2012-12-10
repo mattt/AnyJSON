@@ -1,4 +1,4 @@
-// DemoViewController.h
+// RootViewController.h
 //
 // Copyright (c) 2012 Cédric Luthi (https://twitter.com/0xced)
 //
@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@interface DemoViewController : UIViewController
+@interface RootViewController : UIViewController
 
 @property (nonatomic, unsafe_unretained) IBOutlet UILabel *libraryLabel;
 @property (nonatomic, unsafe_unretained) IBOutlet UITextView *inputTextView;
