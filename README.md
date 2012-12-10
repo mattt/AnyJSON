@@ -10,6 +10,8 @@ AnyJSON implements the `NSJSONSerialization` API on platforms that do not suppor
 - [SBJSON](http://stig.github.com/json-framework/)
 - [NextiveJSON](https://github.com/nextive/NextiveJson)
 
+> For anyone who appreciates lower-level Objective-C hacks, you won't want to miss [how AnyJSON works its magic](https://github.com/mattt/AnyJSON/blob/master/AnyJSON/AnyJSON.m#L247).
+
 ## Compatibility
 
 ### Supported Methods
