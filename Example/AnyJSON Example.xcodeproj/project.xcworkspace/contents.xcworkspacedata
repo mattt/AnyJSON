@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AnyJSON Demo.xcodeproj">
+      location = "self:AnyJSON Example.xcodeproj">
    </FileRef>
 </Workspace>

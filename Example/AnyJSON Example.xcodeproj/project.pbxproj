@@ -183,9 +183,9 @@
 		C20BA5D516591397009CDED0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C20BA5D716591397009CDED0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C20BA5D916591397009CDED0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C20BA5DD16591397009CDED0 /* AnyJSON Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnyJSON Demo-Info.plist"; sourceTree = "<group>"; };
+		C20BA5DD16591397009CDED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C20BA5E116591397009CDED0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C20BA5E316591397009CDED0 /* AnyJSON Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnyJSON Demo-Prefix.pch"; sourceTree = "<group>"; };
+		C20BA5E316591397009CDED0 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		C20BA5E416591397009CDED0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C20BA5E516591397009CDED0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C20BA5ED16591398009CDED0 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
@@ -194,12 +194,12 @@
 		C20BA602165915D3009CDED0 /* AnyJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyJSON.m; sourceTree = "<group>"; };
 		C21E2A45166E9CC300F1E521 /* NextiveJson.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = NextiveJson.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21E2A58166EA2C300F1E521 /* JSONKit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = JSONKit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJL.xcodeproj; path = "AnyJSON Demo/Libraries/YAJL/Project/YAJL.xcodeproj"; sourceTree = "<group>"; };
+		C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJL.xcodeproj; path = /Libraries/YAJL/Project/YAJL.xcodeproj; sourceTree = "<group>"; };
 		C22FAD7D16714E7000AD3D85 /* AnyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyJSON.h; sourceTree = "<group>"; };
 		C297520C1660126900C734D3 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C29752211660129500C734D3 /* AnyJSON+YAJL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+YAJL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJLiOS.xcodeproj; path = "AnyJSON Demo/Libraries/YAJL/Project-iOS/YAJLiOS.xcodeproj"; sourceTree = "<group>"; };
-		C29752501660145700C734D3 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = "AnyJSON Demo/Libraries/SBJson/SBJson.xcodeproj"; sourceTree = "<group>"; };
+		C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJLiOS.xcodeproj; path = "/Libraries/YAJL/Project-iOS/YAJLiOS.xcodeproj"; sourceTree = "<group>"; };
+		C29752501660145700C734D3 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = /Libraries/SBJson/SBJson.xcodeproj; sourceTree = "<group>"; };
 		C2975285166014A700C734D3 /* AnyJSON+SBJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+SBJson.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29752991660152200C734D3 /* AnyJSON+NextiveJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+NextiveJson.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C297529F1660159200C734D3 /* NSError+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Extensions.h"; sourceTree = "<group>"; };
@@ -310,10 +310,9 @@
 		C20BA5C616591397009CDED0 = {
 			isa = PBXGroup;
 			children = (
-				C22FAD7D16714E7000AD3D85 /* AnyJSON.h */,
-				C20BA602165915D3009CDED0 /* AnyJSON.m */,
+				F85092591675527000E10C02 /* AnyJSON */,
 				C29752081660126000C734D3 /* Libraries */,
-				C20BA5DB16591397009CDED0 /* AnyJSON Demo */,
+				C20BA5DB16591397009CDED0 /* AnyJSON Example */,
 				C2EA0B171669745100C07ADA /* anyjson */,
 				C20BA5D416591397009CDED0 /* Frameworks */,
 				C20BA5D216591397009CDED0 /* Products */,
@@ -349,7 +348,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C20BA5DB16591397009CDED0 /* AnyJSON Demo */ = {
+		C20BA5DB16591397009CDED0 /* AnyJSON Example */ = {
 			isa = PBXGroup;
 			children = (
 				C20BA5E416591397009CDED0 /* AppDelegate.h */,
@@ -359,15 +358,16 @@
 				C20BA60016591451009CDED0 /* DemoViewController.xib */,
 				C20BA5DC16591397009CDED0 /* Supporting Files */,
 			);
-			path = "AnyJSON Demo";
+			name = "AnyJSON Example";
+			path = ./;
 			sourceTree = "<group>";
 		};
 		C20BA5DC16591397009CDED0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				C2E7397E166041670042CF6D /* Default-568h@2x.png */,
-				C20BA5DD16591397009CDED0 /* AnyJSON Demo-Info.plist */,
-				C20BA5E316591397009CDED0 /* AnyJSON Demo-Prefix.pch */,
+				C20BA5DD16591397009CDED0 /* Info.plist */,
+				C20BA5E316591397009CDED0 /* Prefix.pch */,
 				C20BA5E116591397009CDED0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -391,7 +391,7 @@
 				C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */,
 				C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */,
 			);
-			name = Libraries;
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		C29752091660126900C734D3 /* JSONKit */ = {
@@ -400,8 +400,7 @@
 				C29752B3166015AD00C734D3 /* JSONKit.h */,
 				C297520C1660126900C734D3 /* JSONKit.m */,
 			);
-			name = JSONKit;
-			path = "AnyJSON Demo/Libraries/JSONKit";
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		C297522D1660139A00C734D3 /* Products */ = {
@@ -438,8 +437,7 @@
 				C29752A61660159200C734D3 /* NXJsonSerializer.m */,
 				C29752A71660159200C734D3 /* NXSerializable.h */,
 			);
-			name = NextiveJson;
-			path = "AnyJSON Demo/Libraries/NextiveJson/Json";
+			path = NextiveJson;
 			sourceTree = "<group>";
 		};
 		C2EA0B171669745100C07ADA /* anyjson */ = {
@@ -448,6 +446,16 @@
 				C2EA0B181669745100C07ADA /* anyjson.m */,
 			);
 			path = anyjson;
+			sourceTree = "<group>";
+		};
+		F85092591675527000E10C02 /* AnyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C22FAD7D16714E7000AD3D85 /* AnyJSON.h */,
+				C20BA602165915D3009CDED0 /* AnyJSON.m */,
+			);
+			name = AnyJSON;
+			path = ../AnyJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,7 +491,7 @@
 			dependencies = (
 			);
 			name = "AnyJSON+JSONKit";
-			productName = "AnyJSON Demo";
+			productName = "AnyJSON Example";
 			productReference = C20BA5D116591397009CDED0 /* AnyJSON+JSONKit.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -534,7 +542,7 @@
 			dependencies = (
 			);
 			name = "AnyJSON+YAJL";
-			productName = "AnyJSON Demo";
+			productName = "AnyJSON Example";
 			productReference = C29752211660129500C734D3 /* AnyJSON+YAJL.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -551,7 +559,7 @@
 			dependencies = (
 			);
 			name = "AnyJSON+SBJson";
-			productName = "AnyJSON Demo";
+			productName = "AnyJSON Example";
 			productReference = C2975285166014A700C734D3 /* AnyJSON+SBJson.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -568,7 +576,7 @@
 			dependencies = (
 			);
 			name = "AnyJSON+NextiveJson";
-			productName = "AnyJSON Demo";
+			productName = "AnyJSON Example";
 			productReference = C29752991660152200C734D3 /* AnyJSON+NextiveJson.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -602,7 +610,7 @@
 			dependencies = (
 			);
 			name = "AnyJSON+JSONKit-static";
-			productName = "AnyJSON Demo";
+			productName = "AnyJSON Example";
 			productReference = C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-static.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -634,7 +642,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = C20BA5CB16591397009CDED0 /* Build configuration list for PBXProject "AnyJSON Demo" */;
+			buildConfigurationList = C20BA5CB16591397009CDED0 /* Build configuration list for PBXProject "AnyJSON Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -971,12 +979,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -987,12 +995,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1043,12 +1051,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1060,12 +1068,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1077,12 +1085,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1094,12 +1102,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1111,12 +1119,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1127,12 +1135,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1167,12 +1175,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"\"$(BUILT_PRODUCTS_DIR)/libAnyJSON.a\"",
@@ -1187,12 +1195,12 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project/Frameworks\"",
-					"\"$(SRCROOT)/AnyJSON Demo/Libraries/YAJL/Project-iOS/Libraries\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project/Frameworks\"",
+					"\"$(SRCROOT)/Libraries/YAJL/Project-iOS/Libraries\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AnyJSON Demo/AnyJSON Demo-Prefix.pch";
-				INFOPLIST_FILE = "AnyJSON Demo/AnyJSON Demo-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"\"$(BUILT_PRODUCTS_DIR)/libAnyJSON.a\"",
@@ -1225,7 +1233,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C20BA5CB16591397009CDED0 /* Build configuration list for PBXProject "AnyJSON Demo" */ = {
+		C20BA5CB16591397009CDED0 /* Build configuration list for PBXProject "AnyJSON Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C20BA5F616591398009CDED0 /* Debug */,

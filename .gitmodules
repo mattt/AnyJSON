@@ -1,12 +1,12 @@
-[submodule "AnyJSON Demo/Libraries/JSONKit"]
-	path = AnyJSON Demo/Libraries/JSONKit
+[submodule "Example/Libraries/JSONKit"]
+	path = Example/Libraries/JSONKit
 	url = https://github.com/johnezang/JSONKit.git
-[submodule "AnyJSON Demo/Libraries/YAJL"]
-	path = AnyJSON Demo/Libraries/YAJL
+[submodule "Example/Libraries/YAJL"]
+	path = Example/Libraries/YAJL
 	url = https://github.com/gabriel/yajl-objc.git
-[submodule "AnyJSON Demo/Libraries/SBJson"]
-	path = AnyJSON Demo/Libraries/SBJson
+[submodule "Example/Libraries/SBJson"]
+	path = Example/Libraries/SBJson
 	url = https://github.com/stig/json-framework.git
-[submodule "AnyJSON Demo/Libraries/NextiveJson"]
-	path = AnyJSON Demo/Libraries/NextiveJson
+[submodule "Example/Libraries/NextiveJson"]
+	path = Example/Libraries/NextiveJson
 	url = https://github.com/nextive/NextiveJson.git
