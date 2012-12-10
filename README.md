@@ -3,18 +3,16 @@ AnyJSON
 
 **Encode / Decode JSON By Any Means Possible**
 
-What was once the most egregious part of [AFNetworking](https://github.com/afnetworking/afnetworking) has been spun off into its own library.
+What was once the most egregious part of [AFNetworking](https://github.com/afnetworking/afnetworking) has been spun off into its own library. This is a library about getting things to work, because there are more important things that you have to do than futz around with an interchange format. 
 
-This is a library about getting things to work, because there are more important things that you have to do than futz around with an interchange format. 
-
-AnyJSON implements the `NSJSONSerialization` API on platforms that do not support it (i.e. iOS < 5) using the first available of the following 3rd-party libraries:
+AnyJSON implements the `NSJSONSerialization` API on platforms that do not support it (i.e. iOS < 5 and Mac OS X < 10.7), using the first available of the following 3rd-party libraries:
 
 - [JSONKit](https://github.com/johnezang/JSONKit)
 - [yajl_json](http://gabriel.github.com/yajl-objc/)
 - [SBJSON](http://stig.github.com/json-framework/)
 - [NextiveJSON](https://github.com/nextive/NextiveJson)
 
-Why anyone can have such strong opinions about functionality that--in so many cases--accounts for such an insignificant percentage of overall runtime is a mystery. But sometimes it's better not to press the issue, and just be as accommodating as you can. AnyJSON keeps the peace.
+Why anyone can have such strong opinions about functionality--that, in so many cases, accounts for such an insignificant percentage of overall runtime--is a mystery. But sometimes it's better not to press the issue, and just be as accommodating as you can. AnyJSON keeps the peace.
 
 ## Compatibility
 
@@ -27,23 +25,28 @@ The following methods are supported by AnyJSON.
 
 ### Supported reading options
 
-* `NSJSONReadingMutableContainers` is supported by JSONKit only.
-* `NSJSONReadingMutableLeaves` is not supported. Note that it does not even work with NSJSONSerialization on iOS 5+.
-* `NSJSONReadingAllowFragments` is not supported but NextiveJSON always allows fragments.
+- `NSJSONReadingMutableContainers` is supported by JSONKit only.
+- `NSJSONReadingMutableLeaves` is not supported. Note that it does not even work with NSJSONSerialization on iOS 5+.
+- `NSJSONReadingAllowFragments` is not supported but NextiveJSON always allows fragments.
 
 ### Supported writing options
 
-* `NSJSONWritingPrettyPrinted` is supported by JSONKit, yajl_json and SBJSON.
+- `NSJSONWritingPrettyPrinted` is supported by JSONKit, yajl_json and SBJSON.
 
 ### Unsupported methods
 
 The following methods are currently not supported by AnyJSON. They throw an `AnyJSONUnimplementedException` exception.
 
-`+ (id)JSONObjectWithStream:(NSInputStream *)stream options:(NSJSONReadingOptions)opt error:(NSError **)error`
-`+ (NSInteger)writeJSONObject:(id)obj toStream:(NSOutputStream *)stream options:(NSJSONWritingOptions)opt error:(NSError **)error`
-`+ (BOOL)isValidJSONObject:(id)obj`
+- `+ (id)JSONObjectWithStream:(NSInputStream *)stream options:(NSJSONReadingOptions)opt error:(NSError **)error`
+- `+ (NSInteger)writeJSONObject:(id)obj toStream:(NSOutputStream *)stream options:(NSJSONWritingOptions)opt error:(NSError **)error`
+- `+ (BOOL)isValidJSONObject:(id)obj`
 
 ## Contact
+
+Cédric Luthi
+- http://github.com/0xced
+- http://twitter.com/0xced
+- cedric.luthi@gmail.com
 
 Mattt Thompson
 
