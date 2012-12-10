@@ -1,7 +1,3 @@
-//
-// Prefix header for all source files of the 'AnyJSON Demo' target in the 'AnyJSON Demo' project
-//
-
 #import <Availability.h>
 
 #ifndef __IPHONE_4_0

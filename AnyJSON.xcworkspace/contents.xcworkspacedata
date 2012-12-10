@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:AnyJSON"
+      name = "AnyJSON">
+      <FileRef
+         location = "group:AnyJSON.h">
+      </FileRef>
+      <FileRef
+         location = "group:AnyJSON.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Example/AnyJSON Example.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CLI/CLI.xcodeproj">
+   </FileRef>
+</Workspace>

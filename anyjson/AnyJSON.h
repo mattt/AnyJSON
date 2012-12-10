@@ -21,7 +21,9 @@
 // THE SOFTWARE.
 
 /*
- * AnyJSON does not provide a public API. Use the built-in NSJSONSerialization
- * API, that AnyJSON will automatically implement with a third-party framework
- * on iOS < 5. See the project README for more information.
+ * AnyJSON does not provide a public API, but instead implements the public API of
+ * NSJSONSerialization using a third-party JSON framework when targeting platforms
+ * without NSJSONSerialization (i.e. iOS < 5.0 and Mac OS X < 10.7).
+ *
+ * See the project README for more information.
  */

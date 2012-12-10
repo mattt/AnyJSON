@@ -67,33 +67,9 @@
 		C2E739A31661030B0042CF6D /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20BA60016591451009CDED0 /* DemoViewController.xib */; };
 		C2E739A41661030B0042CF6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E7397E166041670042CF6D /* Default-568h@2x.png */; };
 		C2E739AB166103430042CF6D /* libAnyJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E739871660F6900042CF6D /* libAnyJSON.a */; };
-		C2EA0B161669745100C07ADA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20BA5D716591397009CDED0 /* Foundation.framework */; };
-		C2EA0B191669745100C07ADA /* anyjson.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EA0B181669745100C07ADA /* anyjson.m */; };
-		C2EA0B211669750200C07ADA /* AnyJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C20BA602165915D3009CDED0 /* AnyJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C21E2A5A166EA2E900F1E521 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C20BA5C816591397009CDED0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C21E2A4D166EA2C300F1E521;
-			remoteInfo = JSONKit;
-		};
-		C21E2A5C166EA2EA00F1E521 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C20BA5C816591397009CDED0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C21E2A44166E9CC300F1E521;
-			remoteInfo = NextiveJson;
-		};
-		C21E2A5E166EA85400F1E521 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C29752501660145700C734D3 /* SBJson.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BC12323C1391D5CC00131607;
-			remoteInfo = SBJson;
-		};
 		C21E2A69166EA88400F1E521 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */;
@@ -107,13 +83,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 00E5DDF80F5B6E3E00C11F1D;
 			remoteInfo = Tests;
-		};
-		C21E2A75166EA92000F1E521 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = YAJL;
 		};
 		C29752371660139A00C734D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -215,8 +184,6 @@
 		C2E7397E166041670042CF6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C2E739871660F6900042CF6D /* libAnyJSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAnyJSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-static.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+JSONKit-static.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2EA0B141669745100C07ADA /* anyjson */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = anyjson; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2EA0B181669745100C07ADA /* anyjson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = anyjson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,24 +263,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2EA0B111669745100C07ADA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2EA0B161669745100C07ADA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C20BA5C616591397009CDED0 = {
 			isa = PBXGroup;
 			children = (
+				C20BA5DB16591397009CDED0 /* AnyJSON Example */,
 				F85092591675527000E10C02 /* AnyJSON */,
 				C29752081660126000C734D3 /* Libraries */,
-				C20BA5DB16591397009CDED0 /* AnyJSON Example */,
-				C2EA0B171669745100C07ADA /* anyjson */,
 				C20BA5D416591397009CDED0 /* Frameworks */,
 				C20BA5D216591397009CDED0 /* Products */,
 			);
@@ -331,7 +289,6 @@
 				C29752991660152200C734D3 /* AnyJSON+NextiveJson.app */,
 				C2E739871660F6900042CF6D /* libAnyJSON.a */,
 				C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-static.app */,
-				C2EA0B141669745100C07ADA /* anyjson */,
 				C21E2A45166E9CC300F1E521 /* NextiveJson.dylib */,
 				C21E2A58166EA2C300F1E521 /* JSONKit.dylib */,
 			);
@@ -438,14 +395,6 @@
 				C29752A71660159200C734D3 /* NXSerializable.h */,
 			);
 			path = NextiveJson;
-			sourceTree = "<group>";
-		};
-		C2EA0B171669745100C07ADA /* anyjson */ = {
-			isa = PBXGroup;
-			children = (
-				C2EA0B181669745100C07ADA /* anyjson.m */,
-			);
-			path = anyjson;
 			sourceTree = "<group>";
 		};
 		F85092591675527000E10C02 /* AnyJSON */ = {
@@ -597,9 +546,9 @@
 			productReference = C2E739871660F6900042CF6D /* libAnyJSON.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		C2E739971661030B0042CF6D /* AnyJSON+JSONKit-static */ = {
+		C2E739971661030B0042CF6D /* AnyJSON+JSONKit-Static */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2E739A51661030B0042CF6D /* Build configuration list for PBXNativeTarget "AnyJSON+JSONKit-static" */;
+			buildConfigurationList = C2E739A51661030B0042CF6D /* Build configuration list for PBXNativeTarget "AnyJSON+JSONKit-Static" */;
 			buildPhases = (
 				C2E739981661030B0042CF6D /* Sources */,
 				C2E7399E1661030B0042CF6D /* Frameworks */,
@@ -609,30 +558,10 @@
 			);
 			dependencies = (
 			);
-			name = "AnyJSON+JSONKit-static";
+			name = "AnyJSON+JSONKit-Static";
 			productName = "AnyJSON Example";
 			productReference = C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-static.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C2EA0B131669745100C07ADA /* anyjson */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C2EA0B1E1669745100C07ADA /* Build configuration list for PBXNativeTarget "anyjson" */;
-			buildPhases = (
-				C2EA0B101669745100C07ADA /* Sources */,
-				C2EA0B111669745100C07ADA /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C21E2A5B166EA2E900F1E521 /* PBXTargetDependency */,
-				C21E2A5D166EA2EA00F1E521 /* PBXTargetDependency */,
-				C21E2A5F166EA85400F1E521 /* PBXTargetDependency */,
-				C21E2A76166EA92000F1E521 /* PBXTargetDependency */,
-			);
-			name = anyjson;
-			productName = anyjson;
-			productReference = C2EA0B141669745100C07ADA /* anyjson */;
-			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -670,12 +599,11 @@
 			projectRoot = "";
 			targets = (
 				C20BA5D016591397009CDED0 /* AnyJSON+JSONKit */,
-				C2E739971661030B0042CF6D /* AnyJSON+JSONKit-static */,
+				C2E739971661030B0042CF6D /* AnyJSON+JSONKit-Static */,
 				C29752891660152200C734D3 /* AnyJSON+NextiveJson */,
 				C2975275166014A700C734D3 /* AnyJSON+SBJson */,
 				C29752111660129500C734D3 /* AnyJSON+YAJL */,
 				C2E739861660F6900042CF6D /* AnyJSON */,
-				C2EA0B131669745100C07ADA /* anyjson */,
 				C21E2A4D166EA2C300F1E521 /* JSONKit */,
 				C21E2A44166E9CC300F1E521 /* NextiveJson */,
 			);
@@ -883,39 +811,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2EA0B101669745100C07ADA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2EA0B191669745100C07ADA /* anyjson.m in Sources */,
-				C2EA0B211669750200C07ADA /* AnyJSON.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C21E2A5B166EA2E900F1E521 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C21E2A4D166EA2C300F1E521 /* JSONKit */;
-			targetProxy = C21E2A5A166EA2E900F1E521 /* PBXContainerItemProxy */;
-		};
-		C21E2A5D166EA2EA00F1E521 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C21E2A44166E9CC300F1E521 /* NextiveJson */;
-			targetProxy = C21E2A5C166EA2EA00F1E521 /* PBXContainerItemProxy */;
-		};
-		C21E2A5F166EA85400F1E521 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SBJson;
-			targetProxy = C21E2A5E166EA85400F1E521 /* PBXContainerItemProxy */;
-		};
-		C21E2A76166EA92000F1E521 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YAJL;
-			targetProxy = C21E2A75166EA92000F1E521 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C20BA5F616591398009CDED0 /* Debug */ = {
@@ -1210,26 +1106,6 @@
 			};
 			name = Release;
 		};
-		C2EA0B1F1669745100C07ADA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		C2EA0B201669745100C07ADA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1305,20 +1181,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2E739A51661030B0042CF6D /* Build configuration list for PBXNativeTarget "AnyJSON+JSONKit-static" */ = {
+		C2E739A51661030B0042CF6D /* Build configuration list for PBXNativeTarget "AnyJSON+JSONKit-Static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2E739A61661030B0042CF6D /* Debug */,
 				C2E739A71661030B0042CF6D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C2EA0B1E1669745100C07ADA /* Build configuration list for PBXNativeTarget "anyjson" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C2EA0B1F1669745100C07ADA /* Debug */,
-				C2EA0B201669745100C07ADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

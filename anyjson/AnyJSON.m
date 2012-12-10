@@ -301,5 +301,5 @@ asm(
 ".weak_reference _OBJC_CLASS_$_NSJSONSerialization\n"
 );
 
-// This dummy category ensures that all the AnyJSON functions are not stripped by the linker if the -ObjC linker flag is used.
+// Dummy category ensures AnyJSON functions are not stripped if the -ObjC linker flag is used.
 @implementation NSObject (AnyJSON) @end
