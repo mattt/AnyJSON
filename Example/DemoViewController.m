@@ -27,6 +27,8 @@
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
+    self.title = NSLocalizedString(@"AnyJSON", nil);
+    
     NSString *library = @"None";
     if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_5_0) {
         library = @"NSJSONSerialization";

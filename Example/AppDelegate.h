@@ -21,4 +21,5 @@
 // THE SOFTWARE.
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
 @end

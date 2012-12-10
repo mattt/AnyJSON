@@ -28,7 +28,6 @@
 		C297521A1660129500C734D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20BA5D716591397009CDED0 /* Foundation.framework */; };
 		C297521B1660129500C734D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20BA5D916591397009CDED0 /* CoreGraphics.framework */; };
 		C297521D1660129500C734D3 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20BA60016591451009CDED0 /* DemoViewController.xib */; };
-		C297523D166013D100C734D3 /* libYAJLiOSDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C29752381660139A00C734D3 /* libYAJLiOSDevice.a */; };
 		C2975277166014A700C734D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C20BA5E116591397009CDED0 /* main.m */; };
 		C2975278166014A700C734D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C20BA5E516591397009CDED0 /* AppDelegate.m */; };
 		C2975279166014A700C734D3 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20BA5EE16591398009CDED0 /* DemoViewController.m */; };
@@ -36,7 +35,6 @@
 		C297527E166014A700C734D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20BA5D716591397009CDED0 /* Foundation.framework */; };
 		C297527F166014A700C734D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20BA5D916591397009CDED0 /* CoreGraphics.framework */; };
 		C2975281166014A700C734D3 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20BA60016591451009CDED0 /* DemoViewController.xib */; };
-		C2975288166014D900C734D3 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C297525F1660145800C734D3 /* libsbjson-ios.a */; };
 		C297528B1660152200C734D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C20BA5E116591397009CDED0 /* main.m */; };
 		C297528C1660152200C734D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C20BA5E516591397009CDED0 /* AppDelegate.m */; };
 		C297528D1660152200C734D3 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20BA5EE16591398009CDED0 /* DemoViewController.m */; };
@@ -70,68 +68,68 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C21E2A69166EA88400F1E521 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = YAJL;
-		};
-		C21E2A6B166EA88400F1E521 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 00E5DDF80F5B6E3E00C11F1D;
-			remoteInfo = Tests;
-		};
-		C29752371660139A00C734D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0065977C11BEEF4000E89ABD;
-			remoteInfo = "YAJLiOS (Device)";
-		};
-		C29752391660139A00C734D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 006597AC11BEEF4800E89ABD;
-			remoteInfo = "YAJLiOS (Simulator)";
-		};
-		C297523B1660139A00C734D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 006597EA11BEEF5400E89ABD;
-			remoteInfo = Tests;
-		};
-		C297525A1660145800C734D3 /* PBXContainerItemProxy */ = {
+		F8BA3D39167581E200B99B93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C29752501660145700C734D3 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC12323D1391D5CC00131607;
 			remoteInfo = SBJson;
 		};
-		C297525C1660145800C734D3 /* PBXContainerItemProxy */ = {
+		F8BA3D3B167581E200B99B93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C29752501660145700C734D3 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BC1232521391D5CC00131607;
 			remoteInfo = SBJsonTests;
 		};
-		C297525E1660145800C734D3 /* PBXContainerItemProxy */ = {
+		F8BA3D3D167581E200B99B93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C29752501660145700C734D3 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BCC2626913920FC7003D9994;
 			remoteInfo = "sbjson-ios";
 		};
-		C29752601660145800C734D3 /* PBXContainerItemProxy */ = {
+		F8BA3D3F167581E200B99B93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C29752501660145700C734D3 /* SBJson.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BCC2627313920FC7003D9994;
 			remoteInfo = "sbjson-iosTests";
+		};
+		F8BA3D4B167581FE00B99B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0065977C11BEEF4000E89ABD;
+			remoteInfo = "YAJLiOS (Device)";
+		};
+		F8BA3D4D167581FE00B99B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 006597AC11BEEF4800E89ABD;
+			remoteInfo = "YAJLiOS (Simulator)";
+		};
+		F8BA3D4F167581FE00B99B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 006597EA11BEEF5400E89ABD;
+			remoteInfo = Tests;
+		};
+		F8BA3D591675820600B99B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = YAJL;
+		};
+		F8BA3D5B1675820600B99B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00E5DDF80F5B6E3E00C11F1D;
+			remoteInfo = Tests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -163,12 +161,12 @@
 		C20BA602165915D3009CDED0 /* AnyJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyJSON.m; sourceTree = "<group>"; };
 		C21E2A45166E9CC300F1E521 /* NextiveJson.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = NextiveJson.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21E2A58166EA2C300F1E521 /* JSONKit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = JSONKit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJL.xcodeproj; path = /Libraries/YAJL/Project/YAJL.xcodeproj; sourceTree = "<group>"; };
+		C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJL.xcodeproj; path = YAJL/Project/YAJL.xcodeproj; sourceTree = "<group>"; };
 		C22FAD7D16714E7000AD3D85 /* AnyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyJSON.h; sourceTree = "<group>"; };
 		C297520C1660126900C734D3 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C29752211660129500C734D3 /* AnyJSON+YAJL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+YAJL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJLiOS.xcodeproj; path = "/Libraries/YAJL/Project-iOS/YAJLiOS.xcodeproj"; sourceTree = "<group>"; };
-		C29752501660145700C734D3 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = /Libraries/SBJson/SBJson.xcodeproj; sourceTree = "<group>"; };
+		C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YAJLiOS.xcodeproj; path = "YAJL/Project-iOS/YAJLiOS.xcodeproj"; sourceTree = "<group>"; };
+		C29752501660145700C734D3 /* SBJson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SBJson.xcodeproj; path = SBJson/SBJson.xcodeproj; sourceTree = "<group>"; };
 		C2975285166014A700C734D3 /* AnyJSON+SBJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+SBJson.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29752991660152200C734D3 /* AnyJSON+NextiveJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+NextiveJson.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C297529F1660159200C734D3 /* NSError+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Extensions.h"; sourceTree = "<group>"; };
@@ -183,7 +181,7 @@
 		C29752B3166015AD00C734D3 /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		C2E7397E166041670042CF6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C2E739871660F6900042CF6D /* libAnyJSON.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAnyJSON.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-static.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+JSONKit-static.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-Static.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnyJSON+JSONKit-Static.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +216,6 @@
 				C29752191660129500C734D3 /* UIKit.framework in Frameworks */,
 				C297521A1660129500C734D3 /* Foundation.framework in Frameworks */,
 				C297521B1660129500C734D3 /* CoreGraphics.framework in Frameworks */,
-				C297523D166013D100C734D3 /* libYAJLiOSDevice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +226,6 @@
 				C297527D166014A700C734D3 /* UIKit.framework in Frameworks */,
 				C297527E166014A700C734D3 /* Foundation.framework in Frameworks */,
 				C297527F166014A700C734D3 /* CoreGraphics.framework in Frameworks */,
-				C2975288166014D900C734D3 /* libsbjson-ios.a in Frameworks */,
 				C2E739961660FA2D0042CF6D /* libAnyJSON.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +284,7 @@
 				C2975285166014A700C734D3 /* AnyJSON+SBJson.app */,
 				C29752991660152200C734D3 /* AnyJSON+NextiveJson.app */,
 				C2E739871660F6900042CF6D /* libAnyJSON.a */,
-				C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-static.app */,
+				C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-Static.app */,
 				C21E2A45166E9CC300F1E521 /* NextiveJson.dylib */,
 				C21E2A58166EA2C300F1E521 /* JSONKit.dylib */,
 			);
@@ -330,23 +326,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C21E2A61166EA88400F1E521 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C21E2A6A166EA88400F1E521 /* YAJL.framework */,
-				C21E2A6C166EA88400F1E521 /* Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C29752081660126000C734D3 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
 				C29752091660126900C734D3 /* JSONKit */,
 				C297529E1660159200C734D3 /* NextiveJson */,
 				C29752501660145700C734D3 /* SBJson.xcodeproj */,
-				C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */,
 				C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */,
+				C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -358,27 +345,6 @@
 				C297520C1660126900C734D3 /* JSONKit.m */,
 			);
 			path = JSONKit;
-			sourceTree = "<group>";
-		};
-		C297522D1660139A00C734D3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C29752381660139A00C734D3 /* libYAJLiOSDevice.a */,
-				C297523A1660139A00C734D3 /* libYAJLiOSSimulator.a */,
-				C297523C1660139A00C734D3 /* Tests.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C29752511660145700C734D3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C297525B1660145800C734D3 /* SBJson.framework */,
-				C297525D1660145800C734D3 /* SBJsonTests.octest */,
-				C297525F1660145800C734D3 /* libsbjson-ios.a */,
-				C29752611660145800C734D3 /* sbjson-iosTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C297529E1660159200C734D3 /* NextiveJson */ = {
@@ -394,7 +360,8 @@
 				C29752A61660159200C734D3 /* NXJsonSerializer.m */,
 				C29752A71660159200C734D3 /* NXSerializable.h */,
 			);
-			path = NextiveJson;
+			name = NextiveJson;
+			path = NextiveJson/Json;
 			sourceTree = "<group>";
 		};
 		F85092591675527000E10C02 /* AnyJSON */ = {
@@ -405,6 +372,36 @@
 			);
 			name = AnyJSON;
 			path = ../AnyJSON;
+			sourceTree = "<group>";
+		};
+		F8BA3D33167581E200B99B93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA3D3A167581E200B99B93 /* SBJson.framework */,
+				F8BA3D3C167581E200B99B93 /* SBJsonTests.octest */,
+				F8BA3D3E167581E200B99B93 /* libsbjson-ios.a */,
+				F8BA3D40167581E200B99B93 /* sbjson-iosTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8BA3D45167581FE00B99B93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA3D4C167581FE00B99B93 /* libYAJLiOSDevice.a */,
+				F8BA3D4E167581FE00B99B93 /* libYAJLiOSSimulator.a */,
+				F8BA3D50167581FE00B99B93 /* Tests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8BA3D551675820600B99B93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8BA3D5A1675820600B99B93 /* YAJL.framework */,
+				F8BA3D5C1675820600B99B93 /* Tests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,7 +557,7 @@
 			);
 			name = "AnyJSON+JSONKit-Static";
 			productName = "AnyJSON Example";
-			productReference = C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-static.app */;
+			productReference = C2E739A81661030B0042CF6D /* AnyJSON+JSONKit-Static.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -584,15 +581,15 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C29752511660145700C734D3 /* Products */;
+					ProductGroup = F8BA3D33167581E200B99B93 /* Products */;
 					ProjectRef = C29752501660145700C734D3 /* SBJson.xcodeproj */;
 				},
 				{
-					ProductGroup = C21E2A61166EA88400F1E521 /* Products */;
+					ProductGroup = F8BA3D551675820600B99B93 /* Products */;
 					ProjectRef = C21E2A60166EA88400F1E521 /* YAJL.xcodeproj */;
 				},
 				{
-					ProductGroup = C297522D1660139A00C734D3 /* Products */;
+					ProductGroup = F8BA3D45167581FE00B99B93 /* Products */;
 					ProjectRef = C297522C1660139A00C734D3 /* YAJLiOS.xcodeproj */;
 				},
 			);
@@ -611,67 +608,67 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C21E2A6A166EA88400F1E521 /* YAJL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = YAJL.framework;
-			remoteRef = C21E2A69166EA88400F1E521 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C21E2A6C166EA88400F1E521 /* Tests.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Tests.framework;
-			remoteRef = C21E2A6B166EA88400F1E521 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C29752381660139A00C734D3 /* libYAJLiOSDevice.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libYAJLiOSDevice.a;
-			remoteRef = C29752371660139A00C734D3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C297523A1660139A00C734D3 /* libYAJLiOSSimulator.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libYAJLiOSSimulator.a;
-			remoteRef = C29752391660139A00C734D3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C297523C1660139A00C734D3 /* Tests.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Tests.app;
-			remoteRef = C297523B1660139A00C734D3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C297525B1660145800C734D3 /* SBJson.framework */ = {
+		F8BA3D3A167581E200B99B93 /* SBJson.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SBJson.framework;
-			remoteRef = C297525A1660145800C734D3 /* PBXContainerItemProxy */;
+			remoteRef = F8BA3D39167581E200B99B93 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C297525D1660145800C734D3 /* SBJsonTests.octest */ = {
+		F8BA3D3C167581E200B99B93 /* SBJsonTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SBJsonTests.octest;
-			remoteRef = C297525C1660145800C734D3 /* PBXContainerItemProxy */;
+			remoteRef = F8BA3D3B167581E200B99B93 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C297525F1660145800C734D3 /* libsbjson-ios.a */ = {
+		F8BA3D3E167581E200B99B93 /* libsbjson-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libsbjson-ios.a";
-			remoteRef = C297525E1660145800C734D3 /* PBXContainerItemProxy */;
+			remoteRef = F8BA3D3D167581E200B99B93 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C29752611660145800C734D3 /* sbjson-iosTests.octest */ = {
+		F8BA3D40167581E200B99B93 /* sbjson-iosTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "sbjson-iosTests.octest";
-			remoteRef = C29752601660145800C734D3 /* PBXContainerItemProxy */;
+			remoteRef = F8BA3D3F167581E200B99B93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8BA3D4C167581FE00B99B93 /* libYAJLiOSDevice.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYAJLiOSDevice.a;
+			remoteRef = F8BA3D4B167581FE00B99B93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8BA3D4E167581FE00B99B93 /* libYAJLiOSSimulator.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYAJLiOSSimulator.a;
+			remoteRef = F8BA3D4D167581FE00B99B93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8BA3D50167581FE00B99B93 /* Tests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Tests.app;
+			remoteRef = F8BA3D4F167581FE00B99B93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8BA3D5A1675820600B99B93 /* YAJL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YAJL.framework;
+			remoteRef = F8BA3D591675820600B99B93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8BA3D5C1675820600B99B93 /* Tests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Tests.framework;
+			remoteRef = F8BA3D5B1675820600B99B93 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
