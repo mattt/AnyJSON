@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C218F24916792C21008B57BA /* AnyJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C218F24716792C16008B57BA /* AnyJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F8D31CE2167577D000AFB571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D31CE1167577D000AFB571 /* Foundation.framework */; };
 		F8D31CE5167577D000AFB571 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D31CE4167577D000AFB571 /* main.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C218F24616792C16008B57BA /* AnyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyJSON.h; sourceTree = "<group>"; };
+		C218F24716792C16008B57BA /* AnyJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnyJSON.m; sourceTree = "<group>"; };
 		F8D31CDD167577D000AFB571 /* anyjson */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = anyjson; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D31CE1167577D000AFB571 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8D31CE4167577D000AFB571 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,9 +45,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C218F24516792C16008B57BA /* AnyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C218F24616792C16008B57BA /* AnyJSON.h */,
+				C218F24716792C16008B57BA /* AnyJSON.m */,
+			);
+			name = AnyJSON;
+			path = ../AnyJSON;
+			sourceTree = "<group>";
+		};
 		F8D31CD2167577D000AFB571 = {
 			isa = PBXGroup;
 			children = (
+				C218F24516792C16008B57BA /* AnyJSON */,
 				F8D31CE3167577D000AFB571 /* CLI */,
 				F8D31CE0167577D000AFB571 /* Frameworks */,
 				F8D31CDE167577D000AFB571 /* Products */,
@@ -136,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8D31CE5167577D000AFB571 /* main.m in Sources */,
+				C218F24916792C21008B57BA /* AnyJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
