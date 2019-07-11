@@ -1,5 +1,7 @@
 ## AnyJSON
 
+> This project is no longer maintained.
+
 **Encode / Decode JSON By Any Means Possible**
 
 AnyJSON implements the `NSJSONSerialization` API
